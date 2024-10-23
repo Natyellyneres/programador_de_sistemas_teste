@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 110px);
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #pokemon-info,
+        #random-pokemon {
+            margin-top: 20px;
+        }
+
+        #pokemon-info img,
+        #random-pokemon img {
+            display: block;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+    <script>
+
+        // Fetch Pokémon by name
+        function searchPokemon() {
+            const pokemonNameInput = document.getElementById('pokemon-name');
+            const pokemonInfoDiv = document.getElementById('pokemon-info');
+            const name = pokemonNameInput.value.toLowerCase();
+            fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+                .then(response => response.json())
+                .then(data => {
+                    pokemonInfoDiv.innerHTML = `
+                            <h3>${data.name}</h3>
+                            <p>Altura: ${data.height}</p>
+                            <p>Peso: ${data.weight}</p>
+                            <p>Habilidades: ${data.abilities.map(ability => ability.ability.name).join(', ')}</p>
+                            <img src="${data.sprites.front_default}" alt="${data.name}">
+                        `;
+                })
+                .catch(error => {
+                    pokemonInfoDiv.innerHTML = `<p>Pokémon não encontrado.</p>`;
+                });
+        }
+
+        // List first 10 Pokémon
+        function tenPokemon() {
+            const pokemonListUl = document.getElementById('pokemon-list');
+            fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+                .then(response => response.json())
+                .then(data => {
+                    data.results.forEach(pokemon => {
+                        const li = document.createElement('li');
+                        li.textContent = pokemon.name;
+                        pokemonListUl.appendChild(li);
+                    });
+                });
+        }
+
+        // Fetch random Pokémon
+        function fetchRandomPokemon() {
+            const id = Math.floor(Math.random() * 100) + 1;
+
+            let randomPokemon = document.getElementById("random-pokemon")
+            fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    randomPokemon.innerHTML = `
+                            <h3>${data.name}</h3>
+                            <p>Altura: ${data.height}</p>
+                            <p>Peso: ${data.weight}</p>
+                            <img src="${data.sprites.front_default}" alt="${data.name}">`;
+                });
+        }
+
+    </script>
+</head>
+
+<body>
+    <main>
+        <section id="search">
+            <input type="text" id="pokemon-name" placeholder="Insira o nome do Pokémon">
+            <button id="search-btn" onclick="searchPokemon()">Buscar</button>
+            <div id="pokemon-info"></div>
+        </section>
+        <section id="list">
+            <h2>Primeiros 10 Pokémon</h2>
+            <button onclick="tenPokemon()">Listar</button>
+            <ul id="pokemon-list"></ul>
+        </section>
+        <section id="random">
+            <h2>Pokémon Aleatório</h2>
+            <button onclick="fetchRandomPokemon()">Gerar</button>
+            <div id="random-pokemon"></div>
+        </section>
+    </main>
+</body>
+
+</html>
