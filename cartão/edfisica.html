@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cartão de visita</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="js.js"  defer />
+ <script src="ed.js"></script>
   </head>
   <body>
     <div id="fundo">
@@ -20,11 +20,19 @@
         <div class="text3">
           <h2 id="nome3">Iracema Neres Ribeiro</h2>
         </div>
+        <div class="text4">
+          <h2 id="nome4">Clique na imagem para mais informações</h2>
+        </div>
+
+
 
         <div id="foto">
-          <img src="foto.webp" alt="Descrição da imagem" />
-          <button onclick="ira()">gfgf</button>
+        <img onclick="ira()"src="foto.webp" alt="Descrição da imagem" />
       </div>
+      <div ><h3 id="info"></h3></div>
+      
+
+
       <div class="card_prof">
           <p id="info" style="display: none;"></p>
           <div id="prof">
@@ -37,17 +45,17 @@
      
       <div id="redes">
         <div id="redes1">
-          <img
+          <img onclick="insta()"id="insta"
             src="https://img.icons8.com/?size=100&id=TEYr8ETaIfBJ&format=png&color=000000"
           />
         </div>
         <div id="redes2">
-          <img
+          <img onclick="whats()"id="whats"
             src="https://img.icons8.com/?size=100&id=108653&format=png&color=000000"
           />
         </div>
         <div id="redes3">
-          <img
+          <img onclick="link()"id="link"
             src="https://img.icons8.com/?size=100&id=108812&format=png&color=000000"
           />
         </div>

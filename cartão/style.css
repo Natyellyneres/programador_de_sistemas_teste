@@ -2,19 +2,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(202, 251, 251);
+  background-color: rgb(3, 22, 107);
+
 }
 
 #foto {
   align-items: center;
   text-align: center;
-  width: 300px;
   padding: 20px;
   display: flex;
   justify-content: center;
 }
 #fundo {
-  background-color: rgb(166, 197, 248);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
   width: 400px;
   padding: 10px 30px;
@@ -26,7 +26,6 @@ body {
   transition: transform 0.9s ease;
 }
 #foto img {
-  width: 100%;
   border-radius: 20px;
   transition: transform 0.9s ease;
 }
@@ -36,7 +35,8 @@ body {
 }
 .text1,
 .text2,
-.text3 {
+.text3, 
+.text4{
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -44,15 +44,26 @@ body {
   border-radius: 50px;
 }
 #nome1 {
-  background-color: rgb(149, 130, 248);
+  background-color: rgb(32, 35, 206);
+ 
   border-radius: 50px;
   width: 100%;
 }
 #nome2,
 #nome3 {
-  background-color: rgb(103, 103, 227);
+  background-color: rgb(74, 74, 250);
   border-radius: 50px;
   width: 100%;
+}
+#nome4{
+  width: 100%;
+  color: antiquewhite;
+}
+.text4 {
+  transition: transform 0.7s ease;
+}
+.text4:hover {
+  transform: scale(1.1);
 }
 .text3 {
   transition: transform 0.7s ease;
@@ -87,7 +98,7 @@ body {
 #prof,
 #desc {
   text-align: center;
-  background-color: rgb(103, 103, 227);
+  background-color: rgb(74, 74, 250);
   border-radius: 15px;
   width: 100%;
 }
@@ -110,4 +121,14 @@ body {
 #redes2:hover,
 #redes3:hover {
   transform: scale(1.1);
+}
+#info {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(42, 84, 224);
+  color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
 }
