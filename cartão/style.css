@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(202, 251, 251);
+}
+
+#foto {
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+#fundo {
+  background-color: rgb(166, 197, 248);
+  border-radius: 10px;
+  width: 400px;
+  padding: 10px 30px;
+}
+#cartao {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.9s ease;
+}
+#foto img {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.9s ease;
+}
+#foto img:hover {
+  border-radius: 20px;
+  transform: scale(1.1);
+}
+.text1,
+.text2,
+.text3 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: -10px;
+  border-radius: 50px;
+}
+#nome1 {
+  background-color: rgb(149, 130, 248);
+  border-radius: 50px;
+  width: 100%;
+}
+#nome2,
+#nome3 {
+  background-color: rgb(103, 103, 227);
+  border-radius: 50px;
+  width: 100%;
+}
+.text3 {
+  transition: transform 0.7s ease;
+}
+.text3:hover {
+  transform: scale(1.1);
+}
+.text2 {
+  transition: transform 0.7s ease;
+}
+.text2:hover {
+  transform: scale(1.1);
+}
+.text1 {
+  transition: transform 0.7s ease;
+}
+.text1:hover {
+  transform: scale(1.1);
+}
+#prof {
+  transition: transform 0.7s ease;
+}
+#prof:hover {
+  transform: scale(1.1);
+}
+#desc {
+  transition: transform 0.7s ease;
+}
+#desc:hover {
+  transform: scale(1.1);
+}
+#prof,
+#desc {
+  text-align: center;
+  background-color: rgb(103, 103, 227);
+  border-radius: 15px;
+  width: 100%;
+}
+#redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#redes:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#redes1,
+#redes2,
+#redes3 {
+  transition: transform 0.7s ease;
+}
+#redes1:hover,
+#redes2:hover,
+#redes3:hover {
+  transform: scale(1.1);
+}

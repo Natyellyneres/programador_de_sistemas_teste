@@ -1,0 +1,13 @@
+body{
+    align-items: center;
+}
+header{
+    text-align: center;
+    background-color: rgb(140, 140, 238);
+    border-radius: 50px;
+    width: 20%;
+    height: 20%;
+    padding: 10px;
+font-size:10px ;
+font-family:Brush Script MT, Brush Script Std, cursive ;
+}
