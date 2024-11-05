@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raposa</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+    <h1>Raposa Aleatória</h1>
+    <button id="fetRposa">Mostra raposa</button>
+    <div id="raposaImg"></div>
+
+    <script>
+        document.getElementById('fetRposa').addEventListener('click', () => {
+            fetch('https://randomfox.ca/floof/')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('raposaImg').innerHTML = `<img src="${data.image}" alt="Raposa" style="max-width: 300px;">`;
+                })
+               
+        });
+    </script>
+</body>
+</html>
