@@ -1,0 +1,97 @@
+*{
+    background: radial-gradient(circle,#4f2bcf 30%,#2d2449 100%);
+
+}
+
+header{
+    background: none;
+}
+body{
+    
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: aliceblue;
+    background-image: url('Design sem nome (1).png');    
+}
+h1 {
+
+    border-radius: 50px;
+   color: rgb(255, 255, 255);
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:rgb(98, 93, 145);
+    padding: 20PX;
+}
+header{
+    justify-content: center;
+    display: flex;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+
+}
+div{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+    background: none;
+    
+
+}
+p{
+    font-weight: bold; 
+    font-size: 25PX;
+    background: none;
+}
+
+table {
+    width: 30%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center;
+    justify-content: center;
+}
+
+th, td {
+    border: 1px solid #fffbfb;
+    text-align: center;
+
+}
+
+th {
+    background-color: rgb(98, 93, 145);
+    color: rgb(2, 2, 2);
+    text-align: center;
+    justify-content: center;
+}
+
+a{
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: rgb(98, 93, 145);
+    padding: 10px 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+#nao{
+    margin-bottom: -30px;
+}
+ul{
+    margin-bottom: 40px;
+}
+ol{
+    margin-bottom: -30px;
+}
+
