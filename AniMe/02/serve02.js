@@ -59,10 +59,10 @@ app.post('/api/anime', (req, res) => {
   //rota PUT para atualizar uma pessoa existente
 app.put('/api/anime/:id', (req, res) => {
     const { id } = req.params;
-    const { Titulo,Genero, Ano_lancamento } = req.body;
+    const { Titulo,Genero, ano_lancamento } = req.body;
     const sql =
       'UPDATE Anime SET Titulo = ?, Genero= ?, Ano_lancamento=? WHERE id_anime =?';
-    db.query(sql, [Titulo,Genero, Ano_lancamento, id], (err, result) => {
+    db.query(sql, [Titulo,Genero, ano_lancamento, id], (err, result) => {
       if (err) {
         console.error('Erro ao atualizar dados,', err);
         res.status(500).send('Erro ao atualizar dados');

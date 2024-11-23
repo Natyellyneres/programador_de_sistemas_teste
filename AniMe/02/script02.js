@@ -20,7 +20,7 @@ document.getElementById("character-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const Titulo = document.getElementById("Titulo").value;
   const Genero = document.getElementById("Genero").value;
-  const ano_lancamento = document.getElementById("ano_lancamento").valeu;
+  const ano_lancamento = document.getElementById("Ano_lancamento").value;
 
   fetch("http://localhost:5577/api/Anime", {
     method: "POST",
